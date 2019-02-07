@@ -4,14 +4,11 @@ title: About
 permalink: /about/
 ---
 
-<img src="{{ site.baseurl }}/assets/profile-placeholder.gif" title="Profile Picture" class="profile">
+<img src="{{ site.baseurl }}/assets/20141224_102113.jpg" title="Profile Picture" class="profile">
 
-Centrarium is a custom theme for Jekyll, made by [Ben Centra][bencentra] for his own blog. He'd be humbled if you liked it enough to use it as well! Installation and configuration instructions can be found in the [GitHub repository](https://github.com/bencentra/centrarium).
+I took this photo at Angel's Landing at Zion National Park in December 2014. I know I should have a look to my left or the person who took this picture should have moved to his left a little more, but, oh well.
 
-This page is a good place to write about yourself, your project, your product, or whatever it is your site is for. You can replace the image above, or you can get rid of it entirely. 
+Anyway, I am thinking of removing this page. This whole website is about myself and why do I need an additional dedicated page to describe myself again? Let me decide before this year-end comes.
 
-You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/). And you can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
-
-[centrarium]: https://github.com/bencentra/centrarium
-[bencentra]: http://bencentra.com
+[saewootuigim]: https://github.com/saewootuigim
 [jekyll]: https://github.com/jekyll/jekyll
