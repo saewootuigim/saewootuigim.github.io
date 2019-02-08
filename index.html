@@ -1,86 +1,501 @@
----
-layout: default
----
-<div class="home">
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
 
-<div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
-  <div class="scrim {% if site.cover %}has-cover{% endif %}">
-    <header class="site-header">
-      <h1 class="title">{{ site.title }}</h1>
-      {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
-    </header>
-  </div>
-</div>
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Seungbum's Awesome Website</title>
+	<meta name="description" content="">
+	<meta name="author" content="Seungbum Koo">
 
-<div class="wrapper">
-<ul class="post-list">
-  {% for post in paginator.posts %}
-  <li>
-    <h2>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
-      <div class="post-categories">
-      {% if post.categories.size > 0 %}in {% for cat in post.categories %}
-        {% if site.jekyll-archives %}
-        <a href="{{ site.baseurl }}/category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
-        {% else %}
-        <a href="{{ site.baseurl }}/posts/#{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
-        {% endif %}
-      {% endfor %}{% endif %}
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+            <li><a class="smoothscroll" href="#education">Education</a></li>
+            <li><a class="smoothscroll" href="#experience">Experience</a></li>
+            <li><a class="smoothscroll" href="#skill">Skills</a></li>
+            <li><a class="smoothscroll" href="#portfolio">Publications</a></li>
+            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">I'm <span style="opacity: 0.2"><s>DJ</s></span> Seungbum Koo.</h1>
+            <h3>I solve <span>differential equations</span> with scientific <span>programming</span>, <br>
+               <span style="opacity: 0.2"><s>but it doesn't bring me money a lot.</s></span><br>
+               Let's <a class="smoothscroll" href="#about">start scrolling</a>
+               and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
+            <hr />
+            <ul class="social">
+<!--                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+               <li><a href="#"><i class="fa fa-skype"></i></a></li> -->
+               <li><a href="https://www.linkedin.com/in/seungbum-koo-91561773/"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="https://github.com/saewootuigim"><i class="fa fa-github"></i></a></li>
+               <li><a href="https://www.youtube.com/channel/UCzT3Ix6hkyBIsE0KHcJiWKg"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+         </div>
       </div>
-    </section>
-  </li>
-  {% if forloop.last == false %}
-  <hr>
-  {% endif %}
-  {% endfor %}
-</ul>
 
-<nav class="pagination" role="navigation">
-	<p>
-    {% if paginator.previous_page %}
-			{% if paginator.page == 2 %}
-			<a class="newer-posts" href="{% if site.baseurl %}{{ site.baseurl }}{% endif %}/">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-			{% else %}
-			<a class="newer-posts" href="{{ site.baseurl }}/page{{paginator.previous_page}}">
-				<span class="fa-stack fa-lg">
-					<i class="fa fa-square fa-stack-2x"></i>
-					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-				</span>
-			</a>
-			{% endif %}
-		{% else %}
-		<span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-    </span>
-		{% endif %}
-		<span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-		{% if paginator.next_page %}
-		<a class="newer-posts" href="{{ site.baseurl }}/page{{paginator.next_page}}">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-		{% else %}
-		<span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-    </span>
-		{% endif %}
-	</p>
-</nav>
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
 
-</div>
-</div>
+   </header> <!-- Header End -->
+
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
+
+      <div class="row">
+
+         <div class="three columns">
+
+            <img class="profile-pic"  src="profile.jpg" alt="" />
+
+         </div>
+
+         <div class="nine columns main-col">
+
+            <h2>About Me</h2>
+
+            <p>
+               I like traveling to nature and spending nights in the middle of nowhere.
+               I try to keep adding the visited national parks in the US in my list at least once a year, but it sometimes works and sometimes doesn't.<br>
+               I used to enjoy running and participated in local marathon events, several fulls, halves, and numerous 10Ks. That has been ceased for last a few years, but I am attempting to resume. Soon. When this winter ends...<br>
+               I earned a Ph.D., and the dissertation was about focusing wave energy to a user-chosen subsurface region by inducing artificial seismic activity, well, of course on the ground. If we have access physically to the subsurface target, why should we have to go through such indirect way to reach there?<br>
+               To wrap this differently, I solved elastic wave equations (or to be more general differential equations) in the time domain using finite element method. That was written in C and Fortran, and with HDF5, PETSc, MKL, Super LU, and etc. I also used MATLAB and Paraview for post-processing and visualization.<br>
+               Now I am learning and using machine learning techniques and applying it to structural engineering research, such as predicting long-term deflection of new civil engineering material, predicting shear strength of reinforced concrete beams, categorizing anticipated failure of structural element by photo recognition, and others too. I use Python, Pandas and other libraries too.
+            </p>
+
+            <div class="row">
+
+               <div class="columns contact-details">
+
+                  <h2>Contact Details</h2>
+                  <p class="address">
+						   <span>Seungbum Koo</span><br>
+						   <span>123 Broadway<br>
+						         Seattle, WA 98122, USA
+                     </span><br>
+						   <!-- <span>(123)456-7890</span><br> -->
+                     <span>findseungbum@gmail.com</span>
+					   </p>
+
+               </div>
+
+               <div class="columns download">
+                  <p>
+                     <a href="https://1drv.ms/b/s!AvokIKceWSZLhapT61_s5NZNcwc5Nw" class="button"><i class="fa fa-download"></i>Download CV</a>
+                  </p>
+               </div>
+
+            </div> <!-- end row -->
+
+         </div> <!-- end .main-col -->
+
+      </div>
+
+   </section> <!-- About Section End-->
+
+
+   <!-- Education Section
+   ================================================== -->
+   <section id="education">
+
+      <!-- Education
+      ----------------------------------------------- -->
+      <div class="row work">
+
+         <div class="three columns header-col">
+            <h1><span>Education</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Georgia Institute of Technology</h3>
+                  <p class="info">M.S. in Computer Science <span>&bull;</span> <em class="date">Attending from January, 2018</em></p>
+
+                  <p><span style="color: #11ABB0"><b>Concentration </b></span> Machine Learning and Data Science<br>
+                     <span style="color: #11ABB0"><b>GPA </b></span> 4.00/4.00
+                  </p>
+
+               </div>
+
+            </div> <!-- Georgia Tech end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>The University of Texas at Austin</h3>
+                  <p class="info">Ph.D. in Civil, Architectural and Environmental Engineering <span>&bull;</span> <em class="date">May, 2017</em></p>
+
+                  <p><span style="color: #11ABB0"><b>Dissertation </b></span> Subsurface elastic wave energy focusing based on a time reversal concept<br>
+                     <span style="color: #11ABB0"><b>Advisor </b></span> Dr. Loukas F. Kallivokas<br>
+                     <span style="color: #11ABB0"><b>Program </b></span> Mechanics, Uncertainty, and Simulation in Engineering<br>
+                     <span style="color: #11ABB0"><b>GPA </b></span> 3.90/4.00
+                  </p>
+
+               </div>
+
+            </div> <!-- UT Austin end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>University of California, Berkeley</h3>
+                  <p class="info">M.S. in Civil and Environmental Engineering <span>&bull;</span> <em class="date">May, 2010</em></p>
+
+                  <p><span style="color: #11ABB0"><b>Program </b></span> Structural Engineering, Mechanics and Materials<br>
+                     <span style="color: #11ABB0"><b>GPA </b></span> 3.80/4.00
+                  </p>
+
+               </div>
+
+            </div> <!-- UC Berkeley end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Seoul National University</h3>
+                  <p class="info">B.S. in Civil, Urban and Geosystem Engineering <span>&bull;</span> <em class="date">February, 2009</em></p>
+
+                  <p><span style="color: #11ABB0"><b>Remarks </b></span> Graduated <em>cum laude</em><br>
+                     <span style="color: #11ABB0"><b>GPA </b></span> 3.72/4.30
+                  </p>
+
+               </div>
+
+            </div> <!-- SNU end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Education -->
+
+   </section> <!-- Education Section End-->
+
+
+   <!-- Experience Section
+   ================================================== -->
+   <section id="experience">
+
+      <!-- Work
+      ----------------------------------------------- -->
+      <div class="row work">
+
+         <div class="three columns header-col">
+            <h1><span>Experience</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Research</h3>
+                  <!-- <p class="info">Senior UX Designer <span>&bull;</span> <em class="date">March 2010 - Present</em></p> -->
+
+                  <p><span style="color: #11ABB0"><b>Machine learning</b></span> Behavior prediction structural material with machine learning algorithms<br>
+                     <span style="color: #11ABB0"><b>Augmented Reality</b></span> Augmented Reality-based mobile application development<br>
+                     <span style="color: #11ABB0"><b>Finite element analysis</b></span> To simulate acoustic and elastic wave propagation<br>
+                     <span style="color: #11ABB0"><b>Absorbing boundary condition</b></span> Perfectly Matched Layers (PMLs)<br>
+                     <span style="color: #11ABB0"><b>Time-reversal method</b></span> Spatio-temporal event localization: to identify wave-causing events such as crack in structures
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Work</h3>
+                  <p> <span class="info">Intern</span> <span>&bull;</span> <span style="font-weight: normal;">Samsung Construction and Trading</span> <span>&bull;</span> <em class="date">December 2008 - January 2009</em><br>
+                     Design modification of Suwon-Incheon railway construction
+                  </p>
+                  
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Teaching</h3>
+                  <p> <span class="info">Lecturer</span> <span>&bull;</span> <span style="font-weight: normal;">The University of Texas at Austin</span> <span>&bull;</span> <em class="date">August 2017 - January 2018</em><br>
+                     Linear Algebra, Differential Equations, Structural Engineering
+                  </p>
+                  
+               </div>
+
+            </div> <!-- item end -->
+
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Work -->
+
+   </section> <!-- Education Section End-->
+
+
+   <!-- Experience Section
+   ================================================== -->
+   <section id="skill">
+
+
+      <!-- Skills
+      ----------------------------------------------- -->
+      <div class="row skill">
+
+         <div class="three columns header-col">
+            <h1><span>Skills</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <p>Followings are computer skillset that I can use.</p>
+
+				<div class="bars">
+
+				   <ul class="skills">
+					   <li><span class="bar-expand C"></span><em>C</em></li>
+                  <li><span class="bar-expand fortran"></span><em>Fortran</em></li>
+						<li><span class="bar-expand CPP"></span><em>C++</em></li>
+						<li><span class="bar-expand MATLAB"></span><em>MATLAB</em></li>
+						<li><span class="bar-expand Python"></span><em>Python</em></li>
+                  <li><span class="bar-expand parallel"></span><em>Parallel Computing</em></li>
+                  <li><span class="bar-expand machine_learning"></span><em>Machine Learning</em></li>
+                  <li><span class="bar-expand html_css"></span><em>HTML & CSS</em></li>
+                  <li><span class="bar-expand patience"></span><em>Patience</em></li>
+					</ul>
+
+				</div><!-- end skill-bars -->
+
+			</div> <!-- main-col end -->
+
+      </div> <!-- End skills -->
+
+   </section> <!-- Resume Section End-->
+
+
+   <!-- Portfolio Section
+   ================================================== -->
+   <!-- 포트폴리오 섹션은 지웠음. 나중에 Research Topic 을 Portfolio section 문법을 이용해 꾸미면 좋을 것 같음. -->
+
+
+   <!-- Contact Section
+   ================================================== -->
+   <section id="contact">
+
+         <div class="row section-head">
+
+            <div class="two columns header-col">
+
+               <h1><span>Get In Touch.</span></h1>
+
+            </div>
+
+            <div class="ten columns">
+
+                  <p class="lead">If you have anything to ask, please use the form below. I will get back to you as soon as possible.<br>
+                     My email address is <strong>findseungbum@gmail.com</strong>, by the way.
+                  </p>
+
+            </div>
+
+         </div>
+
+         <div class="row">
+
+            <div class="eight columns">
+
+               <!-- form -->
+               <form action="" method="post" id="contactForm" name="contactForm">
+					<fieldset>
+
+                  <div>
+						   <label for="contactName">Name <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactName" name="contactName">
+                  </div>
+
+                  <div>
+						   <label for="contactEmail">Email <span class="required">*</span></label>
+						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+                  </div>
+
+                  <div>
+						   <label for="contactSubject">Subject</label>
+						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+                  </div>
+
+                  <div>
+                     <label for="contactMessage">Message <span class="required">*</span></label>
+                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                  </div>
+
+                  <div>
+                     <button class="submit">Submit</button>
+                     <span id="image-loader">
+                        <img alt="" src="images/loader.gif">
+                     </span>
+                  </div>
+
+					</fieldset>
+				   </form> <!-- Form End -->
+
+               <!-- contact-warning -->
+               <div id="message-warning"> Error boy</div>
+               <!-- contact-success -->
+				   <div id="message-success">
+                  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+				   </div>
+
+            </div>
+
+
+            <aside class="four columns footer-widgets">
+
+               <div class="widget widget_contact">
+
+					   <h4>Address and Email</h4>
+					   <p class="address">
+						   Seungbum Koo<br>
+						   123 Broadway<br>
+                     Seattle, WA 98122, USA<br>
+                     findseungbum@gmail.com
+						   <!-- <span>(123) 456-7890</span> -->
+					   </p>
+
+				   </div>
+
+<!--               <div class="widget widget_tweets">
+
+                  <h4 class="widget-title">Latest Tweets</h4>
+
+                  <ul id="twitter">
+                     <li>
+                        <span>
+                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum
+                        <a href="#">http://t.co/CGIrdxIlI3</a>
+                        </span>
+                        <b><a href="#">2 Days Ago</a></b>
+                     </li>
+                     <li>
+                        <span>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                        eaque ipsa quae ab illo inventore veritatis et quasi
+                        <a href="#">http://t.co/CGIrdxIlI3</a>
+                        </span>
+                        <b><a href="#">3 Days Ago</a></b>
+                     </li>
+                  </ul>
+
+		         </div>
+
+            </aside> -->
+
+      </div>
+
+   </section> <!-- Contact Section End-->
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="social-links">
+               <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
+               <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li> -->
+               <!-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
+               <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+               <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
+               <!-- <li><a href="#"><i class="fa fa-skype"></i></a></li> -->
+               <li><a href="https://www.linkedin.com/in/seungbum-koo-91561773/"><i class="fa fa-linkedin"></i></a></li>
+               <li><a href="https://github.com/saewootuigim"><i class="fa fa-github"></i></a></li>
+               <li><a href="https://www.youtube.com/channel/UCzT3Ix6hkyBIsE0KHcJiWKg"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+
+            <ul class="copyright">
+               <li>&copy; Copyright 2014 CeeVee</li>
+               <li>Design by <a href="http://www.styleshout.com/" title="Styleshout" target="_blank">Styleshout</a></li>
+               <li>Struggled by <span style="color: #bf5700">Seungbum</span></li>
+            </ul>
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
+
+</body>
+
+</html>
