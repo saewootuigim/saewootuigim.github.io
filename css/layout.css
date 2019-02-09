@@ -283,7 +283,7 @@ ul#nav li.current a { color: #F06000; }
 
 
 /* ------------------------------------------------------------------ */
-/*Experience Section
+/* d2. Experience Section
 /* ------------------------------------------------------------------ */
 
 #experience {
@@ -332,8 +332,45 @@ ul#nav li.current a { color: #F06000; }
    margin-top: 6px;
 }
 
+
+/* ------------------------------------------------------------------ */
+/* d4. Publication Section
+/* ------------------------------------------------------------------ */
+
+#publication {
+   background: #fff;
+   padding-top: 90px;
+   padding-bottom: 72px;
+   overflow: hidden;
+}
+
+#publication a, #publication a:visited  { color: #11ABB0; }
+#publication a:hover, #publication a:focus { color: #313131; }
+
+#publication h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+#publication h1 span {
+   border-bottom: 3px solid #11ABB0;
+   padding-bottom: 6px;
+}
+#publication h3 {
+   font: 25px/30px 'opensans-bold', sans-serif;
+}
+
+#publication .header-col { padding-top: 9px; }
+#publication .main-col { padding-right: 10%; }
+
+.list {
+   margin-bottom: 48px;
+   padding-bottom: 24px;
+   border-bottom: 1px solid #E8E8E8;
+}
+
 /*----------------------------------------------*/
-/* d3. Skill Bars
+/* d4. Skill Bars
 /*----------------------------------------------*/
 
 #skill {
