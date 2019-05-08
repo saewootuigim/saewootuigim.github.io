@@ -54,12 +54,12 @@ Education
 
 
 .. toctree::
-	:titlesonly:
 	:hidden:
-	:maxdepth: 1
+	:maxdepth: 2
 
 	Home <self>
 	publication
+	Study <posts/index_posts>
 
 .. Indices and tables
 .. ==================
