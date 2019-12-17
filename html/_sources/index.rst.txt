@@ -13,8 +13,8 @@ I am specialized in scientific computing and finite element analysis. I use comp
 
 Title
 ^^^^^
-- Postdoctoral Researcher at Ajou University, South Korea
-- Quality Engineer Intern at Mathworks, Inc., Natick, MA, USA
+- Postdoctoral Researcher at Ajou University, South Korea (Jun. 2018 -- Jun. 2019)
+- Quality Engineer at Mathworks, Inc., Natick, MA, USA (since Jun. 2019)
 
 Contact information
 ^^^^^^^^^^^^^^^^^^^
