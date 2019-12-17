@@ -180,16 +180,16 @@
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput,
-div.nbinput div.prompt,
-div.nbinput div.input_area,
-div.nbinput div[class*=highlight],
-div.nbinput div[class*=highlight] pre,
-div.nboutput,
-div.nbinput div.prompt,
-div.nbinput div.output_area,
-div.nboutput div[class*=highlight],
-div.nboutput div[class*=highlight] pre {
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
     background: none;
     border: none;
     padding: 0 0;
@@ -198,13 +198,13 @@ div.nboutput div[class*=highlight] pre {
 }
 
 /* avoid gaps between output lines */
-div.nboutput div[class*=highlight] pre {
+div.nboutput.container div[class*=highlight] pre {
     line-height: normal;
 }
 
 /* input/output containers */
-div.nbinput,
-div.nboutput {
+div.nbinput.container,
+div.nboutput.container {
     display: -webkit-flex;
     display: flex;
     align-items: flex-start;
@@ -212,35 +212,35 @@ div.nboutput {
     width: 100%;
 }
 @media (max-width: 540px) {
-    div.nbinput,
-    div.nboutput {
+    div.nbinput.container,
+    div.nboutput.container {
         flex-direction: column;
     }
 }
 
 /* input container */
-div.nbinput {
+div.nbinput.container {
     padding-top: 5px;
 }
 
 /* last container */
-div.nblast {
+div.nblast.container {
     padding-bottom: 5px;
 }
 
 /* input prompt */
-div.nbinput div.prompt pre {
+div.nbinput.container div.prompt pre {
     color: #307FC1;
 }
 
 /* output prompt */
-div.nboutput div.prompt pre {
+div.nboutput.container div.prompt pre {
     color: #BF5B3D;
 }
 
 /* all prompts */
-div.nbinput div.prompt,
-div.nboutput div.prompt {
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
     min-width: 7ex;
     padding-top: 0.4em;
     padding-right: 0.4em;
@@ -248,56 +248,56 @@ div.nboutput div.prompt {
     flex: 0;
 }
 @media (max-width: 540px) {
-    div.nbinput div.prompt,
-    div.nboutput div.prompt {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
         text-align: left;
         padding: 0.4em;
     }
-    div.nboutput div.prompt.empty {
+    div.nboutput.container div.prompt.empty {
         padding: 0;
     }
 }
 
 /* disable scrollbars on prompts */
-div.nbinput div.prompt pre,
-div.nboutput div.prompt pre {
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
     overflow: hidden;
 }
 
 /* input/output area */
-div.nbinput div.input_area,
-div.nboutput div.output_area {
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
     padding: 0.4em;
     -webkit-flex: 1;
     flex: 1;
     overflow: auto;
 }
 @media (max-width: 540px) {
-    div.nbinput div.input_area,
-    div.nboutput div.output_area {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
         width: 100%;
     }
 }
 
 /* input area */
-div.nbinput div.input_area {
+div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
     background: #f5f5f5;
 }
 
 /* override MathJax center alignment in output cells */
-div.nboutput div[class*=MathJax] {
+div.nboutput.container div[class*=MathJax] {
     text-align: left !important;
 }
 
 /* override sphinx.ext.imgmath center alignment in output cells */
-div.nboutput div.math p {
+div.nboutput.container div.math p {
     text-align: left;
 }
 
 /* standard error */
-div.nboutput div.output_area.stderr {
+div.nboutput.container div.output_area.stderr {
     background: #fdd;
 }
 
@@ -396,14 +396,14 @@ but it is column-wise normalized.</p>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># This data set is from the University of California, Irvine Machine Learning Repository.</span>
-<span class="c1"># Last column of this data set is the make and name of the cars, which will not be used in this example.</span>
+<span></span># This data set is from the University of California, Irvine Machine Learning Repository.
+# Last column of this data set is the make and name of the cars, which will not be used in this example.
 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+import pandas as pd
 
-<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;MPG&#39;</span><span class="p">,</span> <span class="s1">&#39;Cylinders&#39;</span><span class="p">,</span> <span class="s1">&#39;Displacement&#39;</span><span class="p">,</span> <span class="s1">&#39;Horsepower&#39;</span><span class="p">,</span> <span class="s1">&#39;Weight&#39;</span><span class="p">,</span> <span class="s1">&#39;Acceleration&#39;</span><span class="p">,</span> <span class="s1">&#39;Model Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Origin&#39;</span><span class="p">]</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data&quot;</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="n">column_names</span><span class="p">,</span><span class="n">na_values</span><span class="o">=</span><span class="s2">&quot;?&quot;</span><span class="p">,</span><span class="n">comment</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+column_names = [&#39;MPG&#39;, &#39;Cylinders&#39;, &#39;Displacement&#39;, &#39;Horsepower&#39;, &#39;Weight&#39;, &#39;Acceleration&#39;, &#39;Model Year&#39;, &#39;Origin&#39;]
+df = pd.read_csv(&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data&quot;,names=column_names,na_values=&quot;?&quot;,comment=&quot;\t&quot;,sep=&quot; &quot;,skipinitialspace=True)
+df.head()
 </pre></div>
 </div>
 </div>
@@ -504,17 +504,18 @@ but it is column-wise normalized.</p>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># Let&#39;s do some pre-processing on the data set before starting PCA.</span>
-<span class="c1"># There are nan values in the data.</span>
-<span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span></span># Let&#39;s do some pre-processing on the data set before starting PCA.
+# There are nan values in the data.
+df.isna().sum()
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>MPG             0
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+MPG             0
 Cylinders       0
 Displacement    0
 Horsepower      6
@@ -523,20 +524,19 @@ Acceleration    0
 Model Year      0
 Origin          0
 dtype: int64
-</pre></div>
-</div>
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># Let&#39;s remove them.</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span></span># Let&#39;s remove them.
+import numpy as np
 
-<span class="n">a</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span>
-<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size was </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; is now </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+a = df.shape
+df.dropna(inplace=True)
+print(&quot;Size was {}&quot;.format(a)+&quot; is now {}&quot;.format(df.shape))
 </pre></div>
 </div>
 </div>
@@ -553,9 +553,9 @@ Size was (398, 8) is now (392, 8)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># &quot;Origin column&quot; is categorical. Let&#39;s remove it from the data frame and attach it after PCA.</span>
-<span class="n">origin</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;Origin&quot;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span></span># &quot;Origin column&quot; is categorical. Let&#39;s remove it from the data frame and attach it after PCA.
+origin = df.pop(&quot;Origin&quot;)
+df.head()
 </pre></div>
 </div>
 </div>
@@ -651,8 +651,8 @@ Size was (398, 8) is now (392, 8)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">X_norm</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">-</span><span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">/</span><span class="n">df</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-<span class="n">X_norm</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span></span>X_norm = (df-df.mean())/df.std()
+X_norm.head()
 </pre></div>
 </div>
 </div>
@@ -755,9 +755,9 @@ Size was (398, 8) is now (392, 8)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">cov</span> <span class="o">=</span> <span class="n">X_norm</span><span class="o">.</span><span class="n">cov</span><span class="p">()</span>
-<span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">option_context</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
-  <span class="n">display</span><span class="p">(</span><span class="n">cov</span><span class="p">)</span>
+<span></span>cov = X_norm.cov()
+with pd.option_context(&#39;display.max_rows&#39;, None, &#39;display.max_columns&#39;, None):
+  display(cov)
 </pre></div>
 </div>
 </div>
@@ -887,9 +887,9 @@ Size was (398, 8) is now (392, 8)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">w</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">cov</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;norm of col </span><span class="si">{:1d}</span><span class="s2"> = </span><span class="si">{:.4f}</span><span class="s2">, lambda=</span><span class="si">{:.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">[:,</span><span class="n">i</span><span class="p">]),</span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+<span></span>w, v = np.linalg.eig(cov)
+for i in range(len(w)):
+    print(&quot;norm of col {:1d} = {:.4f}, lambda={:.4f}&quot;.format(i,np.linalg.norm(v[:,i]),w[i]))
 </pre></div>
 </div>
 </div>
@@ -913,15 +913,15 @@ norm of col 6 = 1.0000, lambda=0.0353
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">w</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">w</span> <span class="o">=</span> <span class="n">w</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
-<span class="n">v</span> <span class="o">=</span> <span class="n">v</span><span class="p">[:,</span><span class="n">idx</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;norm of col </span><span class="si">{:1d}</span><span class="s2"> = </span><span class="si">{:.4f}</span><span class="s2">, lambda=</span><span class="si">{:.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">[:,</span><span class="n">i</span><span class="p">]),</span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
-<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;eig</span><span class="si">{:1d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">))]</span>
-<span class="n">V</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
-<span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">option_context</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
-  <span class="n">display</span><span class="p">(</span><span class="n">V</span><span class="p">)</span>
+<span></span>idx = np.argsort(w)[::-1]
+w = w[idx]
+v = v[:,idx]
+for i in range(len(w)):
+    print(&quot;norm of col {:1d} = {:.4f}, lambda={:.4f}&quot;.format(i,np.linalg.norm(v[:,i]),w[i]))
+column_names = [&quot;eig{:1d}&quot;.format(i) for i in range(len(w))]
+V = pd.DataFrame(v,columns=column_names)
+with pd.option_context(&#39;display.max_rows&#39;, None, &#39;display.max_columns&#39;, None):
+  display(V)
 </pre></div>
 </div>
 </div>
@@ -1051,10 +1051,10 @@ norm of col 6 = 1.0000, lambda=0.0353
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">z</span> <span class="o">=</span> <span class="n">w</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
-<span class="n">z_cumul</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:d}</span><span class="s2"> </span><span class="si">{:8.4f}</span><span class="s2"> </span><span class="si">{:8.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">z_cumul</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+<span></span>z = w/sum(w)*100
+z_cumul = np.cumsum(z)
+for i in range(len(z)):
+    print(&quot;{:d} {:8.4f} {:8.4f}&quot;.format(i,z[i],z_cumul[i]))
 </pre></div>
 </div>
 </div>
@@ -1078,44 +1078,44 @@ norm of col 6 = 1.0000, lambda=0.0353
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span></span>import matplotlib.pyplot as plt
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">)),[</span><span class="s2">&quot;PC</span><span class="si">{:1d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">))])</span>
+fig, ax1 = plt.subplots(figsize=(5,3))
+ax2 = plt.twinx()
+_ = plt.xticks(range(len(z)),[&quot;PC{:1d}&quot;.format(i) for i in range(len(z))])
 
 
-<span class="n">plt</span><span class="o">.</span><span class="n">sca</span><span class="p">(</span><span class="n">ax1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">)),</span><span class="n">z</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s2">&quot;None&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">)):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span><span class="n">horizontalalignment</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Percentage [%]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">79</span><span class="p">])</span>
+plt.sca(ax1)
+plt.bar(range(len(z)),z)
+ax1.set_facecolor(&quot;None&quot;)
+plt.grid(False)
+for i in range(len(z)):
+    plt.text(i,z[i]+1,&quot;{:.2f}&quot;.format(z[i]),horizontalalignment=&quot;center&quot;)
+plt.ylabel(&quot;Percentage [%]&quot;)
+plt.ylim([0,79])
 
-<span class="n">plt</span><span class="o">.</span><span class="n">sca</span><span class="p">(</span><span class="n">ax2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">)),</span><span class="n">z_cumul</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;C1&quot;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s2">&quot;None&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">)):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">z_cumul</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">z_cumul</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span><span class="n">horizontalalignment</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span><span class="n">verticalalignment</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Cumulative Percentage [%]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">107</span><span class="p">])</span>
+plt.sca(ax2)
+plt.plot(range(len(z)),z_cumul,color=&quot;C1&quot;,marker=&quot;s&quot;)
+ax1.set_facecolor(&quot;None&quot;)
+plt.grid(False)
+for i in range(1,len(z)):
+    plt.text(i,z_cumul[i]-5,&quot;{:.2f}&quot;.format(z_cumul[i]),horizontalalignment=&quot;center&quot;,verticalalignment=&quot;top&quot;)
+plt.ylabel(&quot;Cumulative Percentage [%]&quot;)
+plt.ylim([0,107])
 
-<span class="c1"># Uncomment below if you want to save the figure.</span>
-<span class="c1">#plt.tight_layout()</span>
-<span class="c1">#plt.savefig(&quot;significance-r200.png&quot;,dpi=200)</span>
+# Uncomment below if you want to save the figure.
+#plt.tight_layout()
+#plt.savefig(&quot;significance-r200.png&quot;,dpi=200)
 </pre></div>
 </div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>(0, 107)
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(0, 107)
+</pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
@@ -1138,8 +1138,8 @@ norm of col 6 = 1.0000, lambda=0.0353
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">X_pca</span> <span class="o">=</span> <span class="n">X_norm</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-<span class="n">X_pca</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span></span>X_pca = X_norm.dot(v)
+X_pca.head()
 </pre></div>
 </div>
 </div>
@@ -1236,10 +1236,10 @@ norm of col 6 = 1.0000, lambda=0.0353
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">C</span> <span class="o">=</span> <span class="n">X_pca</span><span class="o">.</span><span class="n">cov</span><span class="p">()</span>
-<span class="n">C</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">C</span><span class="o">.</span><span class="n">values</span> <span class="o">&lt;</span> <span class="mf">1e-14</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Supress small numbers to zero.</span>
-<span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">option_context</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
-  <span class="n">display</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+<span></span>C = X_pca.cov()
+C.values[C.values &lt; 1e-14] = 0 # Supress small numbers to zero.
+with pd.option_context(&#39;display.max_rows&#39;, None, &#39;display.max_columns&#39;, None):
+  display(C)
 </pre></div>
 </div>
 </div>
@@ -1355,8 +1355,8 @@ norm of col 6 = 1.0000, lambda=0.0353
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">eigval</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lambda[</span><span class="si">{:1d}</span><span class="s2">] = </span><span class="si">{:.4f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">eigval</span><span class="p">))</span>
+<span></span>for i, eigval in enumerate(w):
+  print(&quot;lambda[{:1d}] = {:.4f}&quot;.format(i,eigval))
 </pre></div>
 </div>
 </div>
@@ -1398,7 +1398,7 @@ lambda[6] = 0.0353
   <div role="contentinfo">
     <p>
         &copy; Copyright Seungbum Koo.
-      Last updated on May 08, 2019.
+      Last updated on Dec 17, 2019.
 
     </p>
   </div>
@@ -1432,6 +1432,7 @@ lambda[6] = 0.0353
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
       <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
       <script type="text/javascript" src="../None"></script>
       <script type="text/javascript" src="../_static/jquery.fancybox.min.js"></script>
