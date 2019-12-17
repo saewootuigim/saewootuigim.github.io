@@ -6,15 +6,14 @@ Welcome to Seungbum's Website
 .. _Download CV:
    ../files/cv.pdf
 
-
 Biography
 ^^^^^^^^^
 I am specialized in scientific computing and finite element analysis. I use computational methods to explore and simulate the wave physics for engineering applications. I am also applying the machine laerning techniques to the structural engineering and computation mechanics.
 
 Title
 ^^^^^
-- Postdoctoral Researcher at Ajou University, South Korea (Jun. 2018 -- Jun. 2019)
 - Quality Engineer at Mathworks, Inc., Natick, MA, USA (since Jun. 2019)
+- Postdoctoral Researcher at Ajou University, South Korea (Jun. 2018 -- Jun. 2019)
 
 Contact information
 ^^^^^^^^^^^^^^^^^^^
