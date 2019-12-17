@@ -19,27 +19,27 @@ Contact information
 ^^^^^^^^^^^^^^^^^^^
 |email|_  |github|_  |linkedin|_  |googlescholar|_  |youtube|_
 
-.. |email| image:: _static/email_128x128_gray_balanced.png
+.. |email| image:: _static/email_120x120_gray_balanced.png
 	:width: 40 px
 	:alt: **email**
 .. _email: findseungbum@gmail.com
 
-.. |github| image:: _static/github_128x128_gray_balanced.png
+.. |github| image:: _static/github_120x120_gray_balanced.png
 	:width: 40 px
 	:alt: **GitHub**
 .. _github: https://github.com/saewootuigim
 
-.. |linkedin| image:: _static/linkedin_128x128_gray_balanced.png
+.. |linkedin| image:: _static/linkedin_120x120_gray_balanced.png
 	:width: 40 px
 	:alt: **LinkedIn**
 .. _linkedin: https://www.linkedin.com/in/skoo/
 
-.. |googlescholar| image:: _static/googlescholar_500x500_gray_balanced.png
+.. |googlescholar| image:: _static/googlescholar_120x120_gray_balanced.png
 	:width: 40 px
 	:alt: **Google Scholar**
 .. _googlescholar: https://scholar.google.com/citations?hl=en&user=G3p7p9sAAAAJ
 
-.. |youtube| image:: _static/youtube_128x128_gray_balanced.png
+.. |youtube| image:: _static/youtube_120x120_gray_balanced.png
 	:width: 40 px
 	:alt: **YouTube**
 .. _youtube: https://www.youtube.com/channel/UCzT3Ix6hkyBIsE0KHcJiWKg?view_as=subscriber
