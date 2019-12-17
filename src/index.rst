@@ -8,7 +8,7 @@ Welcome to Seungbum's Website
 
 Biography
 ^^^^^^^^^
-I am specialized in scientific computing and finite element analysis. I use computational methods to explore and simulate the wave physics for engineering applications. I am also applying the machine laerning techniques to the structural engineering and computation mechanics.
+I am specialized in scientific computing and finite element analysis. I use computational methods to explore and simulate the wave physics for engineering applications. I am also applying the machine learning techniques to the structural engineering and computation mechanics.
 
 Title
 ^^^^^
