@@ -11,7 +11,7 @@ Journal
 Conference
 ==========
 1. **S. Koo**, L. F. Kallivokas, Wave energy delivery to multiple subsurface targets using time-reversal method, in: 13th International Conference on Mathematical and Numerical Aspects of Wave Propagation, 2017. `[link] <../files/koo2017wave.pdf>`_
-#. H. Goh, **S. Koo((, L. F. Kallivokas, Resolution control in half-space timereversal wave focusing, in: 13th International Conference on Mathematical and Numerical Aspects of Wave Propagation, 2017. `[link] <../files/goh2017resolution.pdf>`_
+#. H. Goh, **S. Koo**, L. F. Kallivokas, Resolution control in half-space timereversal wave focusing, in: 13th International Conference on Mathematical and Numerical Aspects of Wave Propagation, 2017. `[link] <../files/goh2017resolution.pdf>`_
 #. **S. Koo**, P. M. Karve, L. F. Kallivokas, Wave energy focusing to target subterranean formations: a comparison between a time reversal and an inversesource approach, in: 12th World Congress on Computational Mechanics & 6th Asia-Pacific Congress on Computational Mechanics, 2016. `[link] <../files/WCCM_abstract_Koo.pdf>`_
 
 Dissertation
