@@ -10,6 +10,10 @@ Journal
 
 #. **Koo, Seungbum**, Pranav M. Karve, and Loukas F. Kallivokas. "A comparison of time-reversal and inverse-source methods for the optimal delivery of wave energy to subsurface targets." *Wave Motion* 67 (2016): 121-140. |koo2016comparison|
 
+Conference
+==========
+1. S. Koo, L. F. Kallivokas, Wave energy delivery to multiple subsurface targets using time-reversal method, in: 13th International Conference on Mathematical and Numerical Aspects of Wave Propagation, 2017. `[link] <../files/WAVES2017BookofAbstracts.pdf>`_
+
 Dissertation
 ============
 - **Koo, Seungbum**. "Subsurface elastic wave energy focusing based on a time reversal concept." *PhD diss.*, 2017. |DISS|
