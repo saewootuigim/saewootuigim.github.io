@@ -16,7 +16,7 @@ Conference
 
 Dissertation
 ============
-- **Koo, Seungbum**. "Subsurface elastic wave energy focusing based on a time reversal concept." *PhD diss.*, 2017. |DISS|
+- **Koo, Seungbum**. "Subsurface elastic wave energy focusing based on a time reversal concept." *PhD diss.*, 2017. `[link] <https://repositories.lib.utexas.edu/handle/2152/61529>`_
 
 .. |koo2019development| raw:: html
 
