@@ -10,13 +10,13 @@ Journal
 
 Conference
 ==========
-1. **S. Koo**, L. F. Kallivokas, Wave energy delivery to multiple subsurface targets using time-reversal method, in: 13th International Conference on Mathematical and Numerical Aspects of Wave Propagation, 2017. `[link] <../files/koo2017wave.pdf>`_
-#. H. Goh, **S. Koo**, L. F. Kallivokas, Resolution control in half-space timereversal wave focusing, in: 13th International Conference on Mathematical and Numerical Aspects of Wave Propagation, 2017. `[link] <../files/goh2017resolution.pdf>`_
-#. **S. Koo**, P. M. Karve, L. F. Kallivokas, Wave energy focusing to target subterranean formations: a comparison between a time reversal and an inversesource approach, in: 12th World Congress on Computational Mechanics & 6th Asia-Pacific Congress on Computational Mechanics, 2016. `[link] <../files/WCCM_abstract_Koo.pdf>`_
+1. **S. Koo**, L. F. Kallivokas, Wave energy delivery to multiple subsurface targets using time-reversal method, in: 13th International Conference on Mathematical and Numerical Aspects of Wave Propagation, 2017. |koo2017wave|
+#. H. Goh, **S. Koo**, L. F. Kallivokas, Resolution control in half-space timereversal wave focusing, in: 13th International Conference on Mathematical and Numerical Aspects of Wave Propagation, 2017. |goh2017resolution|
+#. **S. Koo**, P. M. Karve, L. F. Kallivokas, Wave energy focusing to target subterranean formations: a comparison between a time reversal and an inversesource approach, in: 12th World Congress on Computational Mechanics & 6th Asia-Pacific Congress on Computational Mechanics, 2016. |koo2016wave|
 
 Dissertation
 ============
-- **Koo, Seungbum**. "Subsurface elastic wave energy focusing based on a time reversal concept." *PhD diss.*, 2017. |DISS|
+- **S. Koo**. "Subsurface elastic wave energy focusing based on a time reversal concept." *PhD diss.*, 2017. |DISS|
 
 .. |koo2019development| raw:: html
 
@@ -25,6 +25,18 @@ Dissertation
 .. |goh2019resolution| raw:: html
 
 	<a href="https://doi.org/10.1121/1.5097674" target="_blank">[link]</a>
+
+.. |koo2017wave| raw:: html
+
+	<a href="../files/koo2017wave.pdf" target="_blank">[link]</a>
+
+.. |goh2017resolution| raw:: html
+
+	<a href="../files/goh2017resolution.pdf" target="_blank">[link]</a>
+
+.. |koo2016wave| raw:: html
+
+	<a href="../files/WCCM_abstract_Koo.pdf" target="_blank">[link]</a>
 
 .. |koo2016comparison| raw:: html
 
