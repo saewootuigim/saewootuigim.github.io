@@ -4,19 +4,13 @@ Publications
 
 Journal
 =======
-#. **S. Koo**, J. Kim, C. Kim, J. Kim, H. S. Cha, Development of an augmented reality tour guide for a cultural heritage site, J. Comput. Cult. Herit. 12 (4). |koo2019development|
-#. H. Goh, **S. Koo**, L. F. Kallivokas, Resolution improving filter for timereversal (tr) with a switching tr mirror in a halfspace, The Journal of the Acoustical Society of America 145 (4) (2019) 2328–2336. |goh2019resolution|
-#. **S. Koo**, P. M. Karve, L. F. Kallivokas, A comparison of time-reversal and inverse-source methods for the optimal delivery of wave energy to subsurface targets, Wave Motion 67 (2016) 121 – 140. |koo2016comparison|
-
-Conference
-==========
-#. **S. Koo**, L. F. Kallivokas, Wave energy delivery to multiple subsurface targets using time-reversal method, in: 13th International Conference on Mathematical and Numerical Aspects of Wave Propagation, 2017. |koo2017wave|
-#. H. Goh, **S. Koo**, L. F. Kallivokas, Resolution control in half-space timereversal wave focusing, in: 13th International Conference on Mathematical and Numerical Aspects of Wave Propagation, 2017. |goh2017resolution|
-#. **S. Koo**, P. M. Karve, L. F. Kallivokas, Wave energy focusing to target subterranean formations: a comparison between a time reversal and an inversesource approach, in: 12th World Congress on Computational Mechanics & 6th Asia-Pacific Congress on Computational Mechanics, 2016. |koo2016wave|
+#. **Koo, S.**, Kim, J., Kim, C., Kim, J. and Cha, H.S., 2019. Development of an Augmented Reality Tour Guide for a Cultural Heritage Site. Journal on Computing and Cultural Heritage (JOCCH), 12(4), pp.1-24. |koo2019development|
+#. Goh, H., **Koo, S.** and Kallivokas, L.F., 2019. Resolution improving filter for time-reversal (TR) with a switching TR mirror in a halfspace. The Journal of the Acoustical Society of America, 145(4), pp.2328-2336. |goh2019resolution|
+#. **Koo, S.**, Karve, P.M. and Kallivokas, L.F., 2016. A comparison of time-reversal and inverse-source methods for the optimal delivery of wave energy to subsurface targets. Wave Motion, 67, pp.121-140. |koo2016comparison|
 
 Dissertation
 ============
-#. **S. Koo**. "Subsurface elastic wave energy focusing based on a time reversal concept." *PhD diss.*, 2017. |DISS|
+#. **Koo, S.**, 2017. Subsurface elastic wave energy focusing based on a time reversal concept (Doctoral dissertation). |DISS|
 
 .. |koo2019development| raw:: html
 
@@ -25,18 +19,6 @@ Dissertation
 .. |goh2019resolution| raw:: html
 
 	<a href="https://doi.org/10.1121/1.5097674" target="_blank">[link]</a>
-
-.. |koo2017wave| raw:: html
-
-	<a href="../files/koo2017wave.pdf" target="_blank">[link]</a>
-
-.. |goh2017resolution| raw:: html
-
-	<a href="../files/goh2017resolution.pdf" target="_blank">[link]</a>
-
-.. |koo2016wave| raw:: html
-
-	<a href="../files/WCCM_abstract_Koo.pdf" target="_blank">[link]</a>
 
 .. |koo2016comparison| raw:: html
 
