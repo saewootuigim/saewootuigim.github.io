@@ -4,8 +4,6 @@ pushd %~dp0
 
 REM Command file for Sphinx documentation
 
-SET PATH=C:\Users\LG\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\Scripts;%PATH%
-
 if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
