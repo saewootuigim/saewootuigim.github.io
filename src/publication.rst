@@ -4,7 +4,7 @@ Publications
 
 Journal
 =======
-#. **Koo, Seungbum**, Choi, Jongkwon, Kim, Changhyuk. 2020. "Predicting Long-Term Deformation of Soundproofing Resilient Materials Subjected to Compressive Loading: Machine Learning Approach." *Materials* 13, no. 18: 4133. |koo2020predicting|
+#. **Koo, Seungbum**, Jongkwon Choi, and Changhyuk Kim. "Predicting Long-Term Deformation of Soundproofing Resilient Materials Subjected to Compressive Loading: Machine Learning Approach." *Materials* 13, no. 18 (2020): 4133. |koo2020predicting|
 #. **Koo, Seungbum**, Jinyoung Kim, Changhyuk Kim, Jeeyeop Kim, and Hee Sung Cha. "Development of an Augmented Reality Tour Guide for a Cultural Heritage Site." *Journal on Computing and Cultural Heritage (JOCCH)* 12, no. 4 (2019): 1-24. |koo2019development|
 #. Goh, Heedong, **Seungbum Koo**, and Loukas F. Kallivokas. "Resolution improving filter for time-reversal (TR) with a switching TR mirror in a halfspace." *The Journal of the Acoustical Society of America* 145, no. 4 (2019): 2328-2336. |goh2019resolution|
 #. **Koo, Seungbum**, Pranav M. Karve, and Loukas F. Kallivokas. "A comparison of time-reversal and inverse-source methods for the optimal delivery of wave energy to subsurface targets." *Wave Motion* 67 (2016): 121-140. |koo2016comparison|
