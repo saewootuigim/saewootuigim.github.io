@@ -13,7 +13,8 @@ I am specialized in scientific computing and finite element analysis. I use comp
 Title
 ^^^^^
 - Quality Engineer at Mathworks, Inc., Natick, MA, USA (since Jun. 2019)
-- Postdoctoral Researcher at Ajou University, South Korea (Jun. 2018 -- Jun. 2019)
+- Postdoctoral Researcher at Ajou University, Suwon, South Korea (Jun. 2018 -- Jun. 2019)
+- Lecturer at the University of Texas at Austin, Austin, TX, USA (Aug. 2017 -- Jan. 2018)
 
 Contact information
 ^^^^^^^^^^^^^^^^^^^
